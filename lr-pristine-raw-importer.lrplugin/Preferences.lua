@@ -10,7 +10,7 @@ local Settings = require 'Settings'
 local Preferences = {}
 
 --- @enum PureRawVersions
-PureRawVersions = { any = "any", v3 = "v3", v4 = "v4", v5 = "v5" }
+PureRawVersions = { any = "any", v3 = "v3", v4 = "v4", v5 = "v5", v6 = "v6" }
 
 --- @enum StackingMode
 StackingMode = { above = "above", below = "below", noStack = "noStack" }
@@ -46,6 +46,7 @@ function Preferences.settingsView(viewFactory)
                 value = LrView.bind "pureRawVersion",
                 items = {
                     { title = "Any supported version", value = PureRawVersions.any },
+                    { title = "Dxo PureRaw v6",        value = PureRawVersions.v6 },
                     { title = "Dxo PureRaw v5",        value = PureRawVersions.v5 },
                     { title = "DxO PureRaw v4",        value = PureRawVersions.v4 },
                     { title = "DxO PureRaw v3",        value = PureRawVersions.v3 },
